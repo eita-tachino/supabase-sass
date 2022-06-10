@@ -24,11 +24,13 @@ const Nav = () => {
             <span className="ml-2">💸Pricing</span>
           </object>
         </Link>
-        <Link href={user ? "/logout" : "/login"}>
-          <object>
-            <span className="ml-auto">{user ? "Logout" : "Login"}</span>
-          </object>
-        </Link>
+        <div className="ml-auto">
+          <Link href={user ? "/logout" : "/login"}>
+            <object>
+              <a className="ml-auto">{user ? "Logout" : "Login"}</a>
+            </object>
+          </Link>
+        </div>
       </nav>
     </>
   );

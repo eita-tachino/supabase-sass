@@ -58,7 +58,7 @@ const Provider = ({ children }) => {
         supabase.removeSubscription(subscription);
       };
     }
-  }, []);
+  }, [user]);
 
   const login = async () => {
     await supabase.auth.signIn({

@@ -6,7 +6,7 @@ const Login = () => {
   const { login } = useUser();
   useEffect(() => login, []);
 
-  return <div>Logging in</div>;
+  return <p>Logging in</p>;
 };
 
 export default Login;
