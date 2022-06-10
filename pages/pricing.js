@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Pricing = ({ plans }) => {
   const { user, login, isLoading } = useUser();
-  // return <pre>{JSON.stringify(plans, null, 2)}</pre>;
 
   const processSubscription = (planId) => async () => {
     const { data } = await axios.get(`/api/subscription/${planId}`);
@@ -38,7 +37,6 @@ const Pricing = ({ plans }) => {
                 <button onClick={login}>Create Account</button>
               )}
               {showMannageSubscriptionButton && (
-                // <button>Manage Subscription</button>
                 <Link href="/dashbord">
                   <span>Manage Subscription</span>
                 </Link>

@@ -42,13 +42,6 @@ const hundler = async (req, res) => {
     success_url: `${process.env.CLIENT_URL}/payment/success`,
     cancel_url: `${process.env.CLIENT_URL}http://localhost:3000/payment/cancelled`,
   });
-
-  // res.send(user);
-  // res.send({
-  //   ...user,
-  //   stripe_customer,
-  // });
-
   res.send({
     id: session.id,
   });

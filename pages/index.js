@@ -1,15 +1,11 @@
-// import Head from "next/head";
-// import Image from "next/image";
-// import styles from "../styles/Home.module.css";
-
 import { supabase } from "../utills/supabase";
 import Link from "next/link";
 
-import { useUser } from "../context/user";
+// import { useUser } from "../context/user";
 
 export default function Home({ lessons }) {
-  const { user } = useUser();
-  console.log({ user });
+  // const { user } = useUser();
+  // console.log({ user });
   // console.log(supabase.auth.user());
   // console.log(lessons);
   return (
