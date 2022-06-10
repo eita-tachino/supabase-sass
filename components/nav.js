@@ -24,11 +24,11 @@ const Nav = () => {
             <span className="ml-2">💸Pricing</span>
           </object>
         </Link>
-        {/* <Link href={user ? "/logout" : "/login"}>
+        <Link href={user ? "/logout" : "/login"}>
           <object>
             <span className="ml-auto">{user ? "Logout" : "Login"}</span>
           </object>
-        </Link> */}
+        </Link>
       </nav>
     </>
   );
