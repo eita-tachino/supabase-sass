@@ -1,5 +1,5 @@
-import { supabase } from "../utills/supabase";
-import Link from "next/link";
+import { supabase } from '../utills/supabase'
+import Link from 'next/link'
 
 // import { useUser } from "../context/user";
 
@@ -20,14 +20,14 @@ export default function Home({ lessons }) {
         ))}
       </div>
     </>
-  );
+  )
 }
 
 export const getStaticProps = async () => {
-  const { data: lessons } = await supabase.from("lesson").select("*");
+  const { data: lessons } = await supabase.from('lesson').select('*')
   return {
     props: {
       lessons,
     },
-  };
-};
+  }
+}

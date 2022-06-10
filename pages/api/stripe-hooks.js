@@ -1,50 +1,50 @@
-import initStripe from "stripe";
-import { buffer } from "micro";
-import { getServiceSupabase } from "../../utills/supabase";
+import initStripe from 'stripe'
+import { buffer } from 'micro'
+import { getServiceSupabase } from '../../utills/supabase'
 
-export const config = { api: { bodyParser: false } };
+export const config = { api: { bodyParser: false } }
 
 const handler = async (req, res) => {
-  const stripe = initStripe(process.env.STRIPE_SECRET_KEY);
-  const signature = req.headers["stripe-signature"];
-  const signingSecret = process.env.STRIPE_SIGNING_SECRET;
-  const reqBuffer = await buffer(req);
+  const stripe = initStripe(process.env.STRIPE_SECRET_KEY)
+  const signature = req.headers['stripe-signature']
+  const signingSecret = process.env.STRIPE_SIGNING_SECRET
+  const reqBuffer = await buffer(req)
 
-  let event;
+  let event
 
   try {
-    event = stripe.webhooks.constructEvent(reqBuffer, signature, signingSecret);
+    event = stripe.webhooks.constructEvent(reqBuffer, signature, signingSecret)
   } catch (error) {
-    console.log(error);
-    return res.status(400).send(`Webhook error: ${error.message}`);
+    console.log(error)
+    return res.status(400).send(`Webhook error: ${error.message}`)
   }
 
-  const supabase = getServiceSupabase();
+  const supabase = getServiceSupabase()
 
   switch (event.type) {
-    case "customer.subscription.updated":
+    case 'customer.subscription.updated':
       await supabase
-        .from("profile")
+        .from('profile')
         .update({
           is_subscribed: true,
           interval: event.data.object.items.data[0].plan.interval,
         })
-        .eq("stripe_customer", event.data.object.customer);
-      break;
-    case "customer.subscription.deleted":
+        .eq('stripe_customer', event.data.object.customer)
+      break
+    case 'customer.subscription.deleted':
       await supabase
-        .from("profile")
+        .from('profile')
         .update({
           is_subscribed: false,
           interval: null,
         })
-        .eq("stripe_customer", event.data.object.customer);
-      break;
+        .eq('stripe_customer', event.data.object.customer)
+      break
   }
 
-  console.log({ event });
+  console.log({ event })
 
-  res.send({ received: true });
-};
+  res.send({ received: true })
+}
 
-export default handler;
+export default handler

@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { useUser } from "../context/user";
+import Link from 'next/link'
+import { useUser } from '../context/user'
 
 const Nav = () => {
-  const { user } = useUser();
+  const { user } = useUser()
 
   return (
     <>
@@ -25,15 +25,15 @@ const Nav = () => {
           </object>
         </Link>
         <div className="ml-auto">
-          <Link href={user ? "/logout" : "/login"}>
+          <Link href={user ? '/logout' : '/login'}>
             <object>
-              <a className="ml-auto">{user ? "Logout" : "Login"}</a>
+              <a className="ml-auto">{user ? 'Logout' : 'Login'}</a>
             </object>
           </Link>
         </div>
       </nav>
     </>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
