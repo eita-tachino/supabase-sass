@@ -61,7 +61,7 @@ const Provider = ({ children }) => {
 
   const login = async () => {
     await supabase.auth.signIn({
-      provider: 'github',
+      provider: 'google',
     })
   }
 
