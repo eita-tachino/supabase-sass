@@ -26,9 +26,7 @@ const Nav = () => {
         </Link>
         <div className="ml-auto">
           <Link href={user ? '/logout' : '/login'}>
-            <object>
-              <a className="ml-auto">{user ? 'Logout' : 'Login'}</a>
-            </object>
+            <span>{user ? 'Logout' : 'Login'}</span>
           </Link>
         </div>
       </nav>
