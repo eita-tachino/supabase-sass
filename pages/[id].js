@@ -32,7 +32,7 @@ const LessonDetail = ({ lesson }) => {
           width="100%"
           controls={true}
           autoPlay
-          muted={true}
+          muted={false}
         />
       )}
     </div>
