@@ -7,7 +7,7 @@ export default function Home({ lessons }) {
   // const { user } = useUser();
   // console.log({ user });
   // console.log(supabase.auth.user());
-  // console.log(lessons);
+
   return (
     <>
       <div className="w-full max-w-3xl mx-auto my-16 px-2">
