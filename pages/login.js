@@ -7,7 +7,7 @@ const Login = () => {
   // useEffect(() => login, [])
   useEffect(login, [])
 
-  return <p>Logging in</p>
+  return <p>📲 Logging in</p>
 }
 
 export default Login

@@ -6,10 +6,10 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="flex py-4 px-6 border-b border-gray-200">
+      <nav className="flex py-4 px-6 border-b border-gray-200 cursor-pointer">
         <Link href="/">
           <object>
-            <span>🏡Home</span>
+            <span className=" rounded px-4 py-2 hover:bg-sky-700">🏡Home</span>
           </object>
         </Link>
         {!!user && (
