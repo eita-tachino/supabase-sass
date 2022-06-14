@@ -14,7 +14,7 @@ export default function Home({ lessons }) {
         {lessons.map((lesson) => (
           <Link key={lesson.id} href={`/${lesson.id}`}>
             <span className="p-8 h-40 mb-4 rounded shadow text-xl flex">
-              {lesson.title}
+              🌟 {lesson.title}
             </span>
           </Link>
         ))}
