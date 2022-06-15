@@ -9,7 +9,7 @@ const Pricing = ({ plans }) => {
 
   const processSubscription = (planId) => async () => {
     const { data } = await axios.get(`/api/subscription/${planId}`)
-    console.log(data)
+
     const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY)
     await stripe.redirectToCheckout({ sessionId: data.id })
   }

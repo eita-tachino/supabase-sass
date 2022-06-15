@@ -5,7 +5,6 @@ import ReactPlayer from 'react-player'
 // import VimeoPlayer from 'react-player/vimeo'
 
 const LessonDetail = ({ lesson }) => {
-  // console.log(lesson);
   const [videoUrl, setVideoUrl] = useState()
 
   const getPremiumContent = async () => {
