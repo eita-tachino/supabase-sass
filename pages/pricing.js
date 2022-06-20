@@ -33,12 +33,12 @@ const Pricing = ({ plans }) => {
                   className="bg-slate-200"
                   onClick={processSubscription(plan.id)}
                 >
-                  メンバーになる
+                  🧑‍🚀 メンバーになる
                 </button>
               )}
               {showCreateAccountButton && (
                 <button className="bg-slate-200" onClick={login}>
-                  アカウントを作成する
+                  🎮 アカウントを作成する
                 </button>
               )}
               {showMannageSubscriptionButton && (
