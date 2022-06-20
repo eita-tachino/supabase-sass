@@ -44,7 +44,7 @@ const Pricing = ({ plans }) => {
               {showMannageSubscriptionButton && (
                 <Link href="/dashbord">
                   <span className="bg-slate-200 px-2 py-2 rounded ">
-                    プランを管理する
+                    🧮 プランを管理する
                   </span>
                 </Link>
               )}
