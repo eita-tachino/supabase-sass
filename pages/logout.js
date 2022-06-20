@@ -6,7 +6,7 @@ const Logout = () => {
 
   useEffect(logout, [])
 
-  return <p>Logging out</p>
+  return <p>ロウグアウト中です</p>
 }
 
 export default Logout

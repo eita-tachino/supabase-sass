@@ -42,8 +42,10 @@ const Pricing = ({ plans }) => {
                 </button>
               )}
               {showMannageSubscriptionButton && (
-                <Link className="bg-slate-200" href="/dashbord">
-                  <span>プランを管理する</span>
+                <Link href="/dashbord">
+                  <span className="bg-slate-200 px-2 py-2 rounded ">
+                    プランを管理する
+                  </span>
                 </Link>
               )}
             </div>
