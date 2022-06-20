@@ -22,7 +22,10 @@ const Dashbord = () => {
               ? `Subscribed: ${user.interval}`
               : 'Not subscribed'}
           </p>
-          <button className="bg-slate-200" onClick={loadPortal}>
+          <button
+            className="bg-slate-200 rouded px-2 py-2"
+            onClick={loadPortal}
+          >
             プランを管理する
           </button>
         </>
