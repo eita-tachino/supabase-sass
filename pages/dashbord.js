@@ -14,7 +14,7 @@ const Dashbord = () => {
 
   return (
     <div className="w-full max-w-3xl mx-auto py-16 px-8">
-      <h1 className="text-3xl mb-6">Dashbord</h1>
+      <h1 className="text-3xl mb-6">マイページ</h1>
       {!isLoading && (
         <>
           <p className="mb-6">
@@ -22,7 +22,9 @@ const Dashbord = () => {
               ? `Subscribed: ${user.interval}`
               : 'Not subscribed'}
           </p>
-          <button onClick={loadPortal}>Manage Subscription</button>
+          <button className="bg-slate-200" onClick={loadPortal}>
+            プランを管理する
+          </button>
         </>
       )}
     </div>

@@ -29,16 +29,21 @@ const Pricing = ({ plans }) => {
           {!isLoading && (
             <div>
               {showSubscribeButton && (
-                <button onClick={processSubscription(plan.id)}>
-                  Subscribe
+                <button
+                  className="bg-slate-200"
+                  onClick={processSubscription(plan.id)}
+                >
+                  メンバーになる
                 </button>
               )}
               {showCreateAccountButton && (
-                <button onClick={login}>Create Account</button>
+                <button className="bg-slate-200" onClick={login}>
+                  アカウントを作成する
+                </button>
               )}
               {showMannageSubscriptionButton && (
-                <Link href="/dashbord">
-                  <span>Manage Subscription</span>
+                <Link className="bg-slate-200" href="/dashbord">
+                  <span>プランを管理する</span>
                 </Link>
               )}
             </div>

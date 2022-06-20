@@ -34,6 +34,12 @@ const LessonDetail = ({ lesson }) => {
           muted={false}
         />
       )}
+      {!videoUrl && (
+        <p className="text-orange-500 font-bold my-16">
+          このコンテンツは会員限定です。メンバーになって一緒に学んでいきましょう！
+          Please subscripe to see the content!
+        </p>
+      )}
     </div>
   )
 }
